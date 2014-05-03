@@ -116,4 +116,3 @@ $args = array('collection' => $argv[1]);
 $app->init('MongoTest', $args);
 $app->run();
 ```
-
