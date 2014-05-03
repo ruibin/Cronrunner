@@ -90,6 +90,7 @@ class TestFrameworkJob extends CJob {
 ),
 ```
 
+
 ### module using example
 
 ``` include/MongoTest.php
@@ -105,7 +106,8 @@ class MongoTest extends CJob {
 }
 ```
 
-```bin/mongo_test.php
+``` bin/mongo_test.php
+
 <?php
 $inc_file = sprintf('%s/../common.php', dirname(__FILE__));
 require $inc_file;
