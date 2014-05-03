@@ -6,8 +6,11 @@ php cli framework,companont manager,scalable tools
 ##Requirement
 - PHP 5 +
 - pcntl
+
 ## Tutorial
+
 ### layout
+
 ```
 - config.php // Application config
 - common.php
@@ -23,7 +26,9 @@ php cli framework,companont manager,scalable tools
 + www // www virtual directory 
 ```
 ### example
+
 #### bin/testFramework.php
+
 ```
 <?php
 require '../common.php';
@@ -31,7 +36,9 @@ $app = CApp::create($appRoot, $sysConfig);
 $app->init('TestFramework');// Job Factory, or **$app->init('TestFramework', $params_array);**to set some parameters
 $app->run();
 ```
+
 #### include/TestFramework.php
+
 ```
 <?php
 class TestFrameworkJob extends CJob {
@@ -47,7 +54,9 @@ class TestFrameworkJob extends CJob {
     }
 }
 ```
+
 ### configurable modules
+
 ```here is a example of module config
 // module config section
 'modules' => array(
@@ -80,6 +89,7 @@ class TestFrameworkJob extends CJob {
 ),
 
 ### module using example
+
 ``` include/MongoTest.php
 <?php
 // class name must be same to file name
