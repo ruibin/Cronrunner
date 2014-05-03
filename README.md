@@ -58,7 +58,7 @@ class TestFrameworkJob extends CJob {
 ### configurable modules
 
 ``` here is a example of module config
-
+<?php
 // module config section
 'modules' => array(
     // @logger:ERROR->NOTICE->WARNNING->EXCEPTION->INFO->ALL
@@ -88,6 +88,7 @@ class TestFrameworkJob extends CJob {
         ),
     ),
 ),
+
 ```
 
 ### module using example
@@ -97,7 +98,7 @@ class TestFrameworkJob extends CJob {
 // class name must be same to file name
 class MongoTest extends CJob {
     public function jobAction() {
-        // Mongodb connection handler,lazy connection
+        // Mongodb connection handler,connect mongodb lazily
         $db = $this->_appInstance->mongo_test->mongoDb;     
         $collection = $this->getParams('collection');
         var_dump($db->$collection->findone());
