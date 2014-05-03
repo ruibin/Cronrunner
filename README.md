@@ -57,7 +57,8 @@ class TestFrameworkJob extends CJob {
 
 ### configurable modules
 
-```here is a example of module config
+``` here is a example of module config
+
 // module config section
 'modules' => array(
     // @logger:ERROR->NOTICE->WARNNING->EXCEPTION->INFO->ALL
@@ -87,6 +88,7 @@ class TestFrameworkJob extends CJob {
         ),
     ),
 ),
+```
 
 ### module using example
 
