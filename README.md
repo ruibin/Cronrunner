@@ -29,7 +29,7 @@ php cli framework,companont manager,scalable tools
 
 #### bin/testFramework.php
 
-```
+```php
 <?php
 require '../common.php';
 $app = CApp::create($appRoot, $sysConfig);
@@ -39,7 +39,7 @@ $app->run();
 
 #### include/TestFramework.php
 
-```
+```php
 <?php
 class TestFrameworkJob extends CJob {
     public function jobAction()
@@ -57,7 +57,8 @@ class TestFrameworkJob extends CJob {
 
 ### configurable modules
 
-``` here is a example of module config
+here is a example of module config
+```php
 <?php
 // module config section
 'modules' => array(
@@ -93,7 +94,8 @@ class TestFrameworkJob extends CJob {
 
 ### module using example
 
-``` include/MongoTest.php
+include/MongoTest.php
+```php
 <?php
 // class name must be same to file name
 class MongoTest extends CJob {
@@ -106,7 +108,8 @@ class MongoTest extends CJob {
 }
 ```
 
-``` bin/mongo_test.php
+bin/mongo_test.php
+```php
 
 <?php
 $inc_file = sprintf('%s/../common.php', dirname(__FILE__));
