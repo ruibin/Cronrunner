@@ -62,7 +62,7 @@ class TestFrameworkJob extends CJob {
 // module config section
 'modules' => array(
     // @logger:ERROR->NOTICE->WARNNING->EXCEPTION->INFO->ALL
-    // log level does inverse relationship with **LogLevel** number value
+    // log level does inverse relationship with LogLevel number value
     'logger' => array(
         'logOn'         => true, // logger switcher
         'logLevel'      => 5,
@@ -88,7 +88,6 @@ class TestFrameworkJob extends CJob {
         ),
     ),
 ),
-
 ```
 
 ### module using example
@@ -105,6 +104,7 @@ class MongoTest extends CJob {
     }
 }
 ```
+
 ```bin/mongo_test.php
 <?php
 $inc_file = sprintf('%s/../common.php', dirname(__FILE__));
