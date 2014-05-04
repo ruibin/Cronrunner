@@ -1,6 +1,7 @@
 <?php
 /**
- * @author chuanbin<hcb0825@126.com>
+ * @author ruibin<hcb0825@126.com>
+ * @author ruibin<hcb0825@126.com>
  * @since 2012-09
  */
 class CMongo extends CObject {

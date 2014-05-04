@@ -4,7 +4,7 @@
  * ========================= abstract class CObject ============================
  *
  * @package Framework
- * @author Zhang jiuzhou
+ * @author ruibin<hcb0825@126.com>
  * @since 2012 - 08
  *
  * -----------------------------------------------------------------------------

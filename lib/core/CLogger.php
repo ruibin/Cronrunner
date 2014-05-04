@@ -5,7 +5,7 @@
  * all kinds of php interval error level is supported but the fatal error and the user defined
  * errors are also supported
  * don't worry about parallel working job using this logger because file lock is used
- * @author hongchuanbin
+ * @author ruibin<hcb0825@126.com>
  * @since 2012-09
  */
 class CLogger extends CObject {

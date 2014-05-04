@@ -1,7 +1,8 @@
 <?php
 /**
  * 自动加载config、include、lib下面的文件
- * @author chuanbin<hcb0825@126.com>
+ * @author ruibin<hcb0825@126.com>
+ * @author ruibin<hcb0825@126.com>
  * @since 2012-08
  */
 class CAutoLoader {

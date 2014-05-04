@@ -3,7 +3,8 @@
  * all job must extends CObject,if not you can't use 
  * the registered components
  * @package JobFramework
- * @author chuanbin<hcb0825@126.com>
+ * @author ruibin<hcb0825@126.com>
+ * @author ruibin<hcb0825@126.com>
  * @since 2012-09
  */
 

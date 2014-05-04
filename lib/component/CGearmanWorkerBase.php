@@ -1,7 +1,8 @@
 <?php 
 /**
  * gearman worker抽象类
- * @author hongchuanbin@gmail.com
+ * @author hcb0825@126.com
+ * @author hcb0825@126.com
  * @since 2012-08-27
  */
 if (version_compare(PHP_VERSION, "5.3.0") < 0) {

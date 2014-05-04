@@ -2,7 +2,7 @@
 /**
  * 
  * @package Framework
- * @author hongchuanbin<hcb0825@126.com>
+ * @author ruibin<hcb0825@126.com>
  * Application class manage the program life cycle, handle exceptions and store
  * all components.
  *
