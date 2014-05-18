@@ -1,7 +1,7 @@
 Cronrunner
 ==========
 
-php cli framework,companont manager,scalable tools
+php cli framework,compenont manager,scalable tools
 
 ##Requirement
 - PHP 5 +

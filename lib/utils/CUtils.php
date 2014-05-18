@@ -539,7 +539,7 @@ XML;
     }/*}}}*/
 
     static function pullHdfsData($hdfs_path, $local_file, $is_zip = true, 
-        $need_backup = true, $hdp_bin = '/home/work/software/hadoop/bin/hadoop') {/*{{{*/
+        $need_backup = true, $hdp_bin = '/usr/local/hadoop/bin/hadoop') {/*{{{*/
         if (file_exists($local_file)) {
             if ($need_backup) {
                 $new_file = $local_file .".bak"; 
