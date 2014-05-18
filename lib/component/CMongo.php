@@ -1,7 +1,6 @@
 <?php
 /**
- * @author ruibin<hcb0825@126.com>
- * @author ruibin<hcb0825@126.com>
+ * @author chuanbin<hcb0825@126.com>
  * @since 2012-09
  */
 class CMongo extends CObject {
@@ -17,7 +16,7 @@ class CMongo extends CObject {
     
     protected $_mongoConn;
     protected $_mongoDb;
-    
+
     function __destruct()
     {
         if (!empty($this->_mongoConn) && $this->_mongoConn instanceof  MongoClient) {
@@ -37,6 +36,13 @@ class CMongo extends CObject {
         if (!isset($this->_mongoConf['dsn']) || !isset($this->_mongoConf['options'])) {
             trigger_error("the keys dsn,options is necessary in mongo config", E_USER_NOTICE);
         }
+        $retry_time = 5;
+        if (isset($this->_mongoConf['connect_retry'])) {
+            $retry_time = intval($this->_mongoConf['connect_retry']);
+            if ($retry_time < 1) {
+                throw new Exception('error config connect_retry for mongo'); 
+            }
+        }
         $dsn_db = substr(strrchr($this->_mongoConf['dsn'], '/'), 1);
         $mongoOptions = $this->_mongoConf['options'];
         if (!isset($mongoOptions['db'])) {
@@ -46,10 +52,21 @@ class CMongo extends CObject {
         if ($opt_db != $dsn_db) {
             $mongoOptions['db'] = $dsn_db; 
         }
-        if (empty($this->_mongoConn)) {
-            $this->_mongoConn = new MongoClient($this->_mongoConf['dsn'], $mongoOptions);
-        }
-        
+        $is_connected = false;
+        $i = 0;
+        do {
+            try {
+                if (empty($this->_mongoConn)) {
+                    $this->_mongoConn = new MongoClient($this->_mongoConf['dsn'], $mongoOptions);
+                }
+                break;
+            } catch(MongoConnectionException $ex) {
+                $i++; 
+                if ($i >= $retry_time) {
+                    throw $ex;
+                }
+            }
+        }while(!$is_connected);
         $dbName = $opt_db;
         $this->_mongoDb = $this->_mongoConn->$dbName;
     }
