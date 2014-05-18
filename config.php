@@ -6,7 +6,7 @@ return array(
     'logBacktrace'      => true,
     'extensionSwitch'   => true,
     'needExtensions'    => array('pcntl'),
-    'defaultLoggerConf' => array('logOn' => true, 'logLevel' => 4, 'logInShell' => true,
+    'defaultLoggerConf' => array('logOn' => true, 'logLevel' => 17, 'logInShell' => true,
                                 'logFormatDay' => true, 'logFormatMonth' => false),
     'memLimit'          => "1G",
     // 注册模块，这样配置会自加载到相应模块里
@@ -17,7 +17,7 @@ return array(
          **/
         'logger' => array(
             'logOn'         => true,
-            'logLevel'      => 5,
+            'logLevel'      => 17,
             //'logInShell'    => false,
             'logInShell'    => true,
             'logFormatMonth'=> false,
